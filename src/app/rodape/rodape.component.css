@@ -1,0 +1,27 @@
+ul.social-network {
+    list-style: none;
+    padding: 0;
+}
+ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 7px;
+}
+
+.fa {
+    font-size: 35px;
+    color: white;
+    padding: 10-px;
+}
+
+.fa-github:hover{
+    color: black;
+}
+
+.fa-instagram:hover{
+    color: #c13584;
+}
+
+.fa-twitter-square:hover{
+    color: darkturquoise;
+}
