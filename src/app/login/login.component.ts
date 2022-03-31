@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private auth: AuthenticationService,
-    private router: Router
+    private route: Router
   ) { }
 
   ngOnInit() {
@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       
       // console.log(environment.id)  Os console.log permite ter acesso aos dados dos usuarios.
 
-      this.router.navigate(['/inicio'])
+      this.route.navigate(['/inicio'])
     },
     error: error =>{
       if(error.status == 401){
