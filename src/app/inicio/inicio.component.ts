@@ -38,7 +38,7 @@ export class InicioComponent implements OnInit {
       alert('Sua seção expirou, faça o login novamente.')
       this.router.navigate(['/login'])
     }
-
+      this.authenticationService.refreshToken
       this.getAllTemas()
       this.getAllPostagens()
 
@@ -75,7 +75,7 @@ export class InicioComponent implements OnInit {
 
     this.usuario.id = this.idUsuario
     this.postagem.usuario = this.usuario
-
+   
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem realizada com sucesso!')

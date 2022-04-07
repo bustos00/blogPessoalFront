@@ -40,9 +40,11 @@
            href="#nav-minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" 
            aria-selected="false">Minhas Postagens</a>
 
-          <a class="nav-link text-secondary font-weight-bold" id="nav-tema-tab" data-toggle="tab" 
-          href="#nav-tema" role="tab" aria-controls="nav-tema" 
-          aria-selected="false">Tema</a>
+           <a
+           class="nav-link text-secondary font-weight-bold" id="nav-postagemTema-tab"
+           data-toggle="tab" href="#postagemTema" role="tab" aria-controls="nav-postagemTema"
+           aria-selected="false" >Postagens por tema</a
+         >
         </div>
       </nav>
 
@@ -81,7 +83,10 @@
              <p class="card-text mt-3">{{item.texto}}</p>
              <p class="card-text"><small class="text-muted">
                {{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}
-             </small></p>       
+             </small></p>
+
+             <a [routerLink]="['/postagem-edit',item.id]" class="text-info mr-3" href="">Editar</a>
+             <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
 
            </div>
          </div>
