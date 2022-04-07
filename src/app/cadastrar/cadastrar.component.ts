@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { error } from 'console';
-import { environment } from 'src/environments/environment';
 import { Usuario } from '../model/Usuario';
-import { UsuarioLogin } from '../model/UsuarioLogin';
 import { AuthenticationService } from '../service/authentication.service';
 
 @Component({
@@ -40,7 +37,7 @@ export class CadastrarComponent implements OnInit {
     this.usuario.tipo = this.tipoUsuario    
 
     if(this.usuario.senha != this.confirmarSenha){
-     alert('As senhas estão incorretas.')
+     alert('A senha está incorreta!')
 
     } else{
       console.log(this.usuario)
