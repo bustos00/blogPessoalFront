@@ -23,17 +23,17 @@ export class AuthenticationService {
   }
 
   entrar( usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
-    return this.http.post<UsuarioLogin>('https://blogpessoalthiago.herokuapp.com/usuarios/logar', usuarioLogin)
+    return this.http.post<UsuarioLogin>('https://blogsotie.herokuapp.com/usuarios/logar', usuarioLogin)
 
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario>{
-    return this.http.post<Usuario>('https://blogpessoalthiago.herokuapp.com/usuarios/cadastrar', usuario)
+    return this.http.post<Usuario>('https://blogsotie.herokuapp.com/usuarios/cadastrar', usuario)
 
   }
 
   getByIdUsuario(id: number): Observable<Usuario>{
-    return this.http.get<Usuario>(`https://blogpessoalthiago.herokuapp.com/usuarios/${id}`)
+    return this.http.get<Usuario>(`https://blogsotie.herokuapp.com/usuarios/${id}`, this.token)
 
   }
 
