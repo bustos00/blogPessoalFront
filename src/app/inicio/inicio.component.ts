@@ -107,7 +107,7 @@ export class InicioComponent implements OnInit {
     if(this.descricaoTema == ''){
       this.getAllTemas()
     }else{
-      this.temaService.getByNomeTema(this.descricaoTema).subscribe((resp: Tema[])=>{
+      this.temaService.getByDescricaoTema(this.descricaoTema).subscribe((resp: Tema[])=>{
         this.listaTemas = resp
       })
     }
