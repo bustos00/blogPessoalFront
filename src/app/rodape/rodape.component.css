@@ -10,20 +10,20 @@ ul.social-network li {
 
 .fa {
     font-size: 35px;
-    color: darkturquoise;
+    color: white;
     padding: 10-px;
 }
 
 .fa-github:hover{
-    color: white;
+    color: darkturquoise;
 }
 
 .fa-instagram:hover{
-    color: white;
+    color: darkturquoise;
 }
 
 .fa-twitter-square:hover{
-    color: white;
+    color: darkturquoise;
 }
 
 .bg{
